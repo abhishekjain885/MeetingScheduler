@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#00A787"
+        android:maxHeight="40dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="#00A787"
+            android:drawableLeft="@drawable/ic_prev"
+            android:onClick="onPreviousButtonClick"
+            android:text="PREV"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_display_date"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00A787"
+
+            android:text="date and time"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#00A787"
+            android:drawableRight="@drawable/ic_next"
+            android:onClick="onNextButtonClick"
+            android:shadowColor="#00A787"
+            android:text="Next"
+            android:textColor="#FFFFFF" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/meeting_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13" />
+
+
+    <Button
+        android:id="@+id/schedule_meeting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.5"
+        android:background="#00A787"
+        android:onClick="onScheduleMeetingClicked"
+        android:text="SCHEDULE COMPANY MEETING"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
